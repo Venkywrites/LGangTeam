@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager – Docker Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Task Manager</h1>
+      <p class="subtitle">Docker End-to-End Demo &mdash; Flask &middot; PostgreSQL &middot; Redis &middot; Nginx</p>
+    </header>
+    <section class="stats-bar" id="stats">
+      <span id="stat-total">Total: &mdash;</span>
+      <span id="stat-completed">Done: &mdash;</span>
+      <span id="stat-pending">Pending: &mdash;</span>
+    </section>
+    <section class="add-task">
+      <h2>Add Task</h2>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Task title" required />
+        <textarea id="task-desc" placeholder="Description (optional)" rows="2"></textarea>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+    <section class="task-list">
+      <h2>Tasks <span id="cache-badge" class="badge hidden">cached</span></h2>
+      <div id="tasks-container">
+        <p class="loading">Loading...</p>
+      </div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
